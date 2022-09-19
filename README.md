@@ -105,7 +105,7 @@ I am looking deeper to understanding the implementations of functions in SCSS an
 
 - [Google Webfonts Helper](https://google-webfonts-helper.herokuapp.com/fonts/plus-jakarta-sans?subsets=latin) - This helped me generate google fonts for local use.
 
-- [CSS Transition Properties](https://www.freecodecamp.org/news/css-transitions-explained-d67ab9a02049/#:~:text=Transitioning%20two%20or%20more%20properties,to%20specify%20one%20of%20them.) -This assisted me in understanding targetting multiple properties in css transition.
+- [CSS Transition Properties](https://www.freecodecamp.org/news/css-transitions-explained-d67ab9a02049/#:~:text=Transitioning%20two%20or%20more%20properties,to%20specify%20one%20of%20them.) -This assisted me in understanding how to target multiple properties in css transition.
 
 ## Author
 
