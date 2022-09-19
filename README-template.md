@@ -31,20 +31,18 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Desktop](https://github.com/mrpaulishaili/fm-notification-page/blob/main/assets/images/desktop.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![Mobile](https://github.com/mrpaulishaili/fm-notification-page/blob/main/assets/images/mobile.jpg)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
+![Hover / Active](https://github.com/mrpaulishaili/fm-notification-page/blob/main/assets/images/active-state.jpg)
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![All Messages Read](https://github.com/mrpaulishaili/fm-notification-page/blob/main/assets/images/all-messages-read.jpg)
 
 ### Links
 
-- Solution URL: [GitHub](https://your-solution-url.com)
-- Live Site URL: [GitHub Pages](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/fm-notification-page)
+- Live Site URL: [GitHub Pages](https://mrpaulishaili.github.io/fm-notification-page/)
 
 ## My process
 
@@ -87,9 +85,6 @@ In taking this challenge, I have been able to learn and understand quite a numbe
   border-radius: 0.25rem;
   background-color: var(--blue);
   color: var(--white);
-  font-size: 1rem;
-  height: 1.8rem;
-  width: 2.5rem;
   @include flexCenter();
 }
 ```
