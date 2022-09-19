@@ -3,6 +3,7 @@
 :root {
   // Color Variables
   --white: hsl(0, 0%, 100%);
+  --v-light-blue: hsl(210, 60%, 98%);
   --light-blue: hsl(211, 68%, 94%);
   --blue: hsl(219, 85%, 26%);
   --grayish-blue-1: hsl(219, 12%, 42%);
@@ -77,8 +78,8 @@ main {
     background-color: var(--blue);
     color: var(--white);
     font-size: 1rem;
-    height: 1.8rem;
-    width: 2.5rem;
+    height: 1.75rem;
+    width: 2.2rem;
     @include flexCenter();
   }
 }
@@ -146,24 +147,17 @@ main {
       border-radius: 0.5rem;
       margin-top: 0.35rem;
       color: var(--grayish-blue-1);
-    }
-
-    // State: Hover
-
-    &:hover {
-      cursor: pointer;
-      scale: 1.005;
-      border-color: var(--light-blue);
-    }
-
-    &.notRead:hover {
       background-color: #fff;
+
+      &:hover {
+        background-color: (var(--light-blue));
+      }
     }
 
     // State: Distinguish between Read and Unread Notifications
 
     &.notRead {
-      background-color: var(--light-blue);
+      background-color: var(--v-light-blue);
 
       .notification__status {
         background-color: var(--red);
@@ -171,13 +165,38 @@ main {
         width: 0.6rem;
       }
     }
+
+    // State: Hover
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--light-blue);
+      scale: 1.005;
+      border-color: var(--light-blue);
+    }
+
+    &.hasInnerMessage {
+      &:hover {
+        background-color: #fff !important;
+      }
+    }
+
+    &__name,
+    &__topic,
+    &__action {
+      &:hover {
+        color: var(--blue);
+      }
+    }
   }
 }
 #markRead {
+  font-weight: 500;
+  color: var(--grayish-blue-2);
   transition: font-weight 0.2s ease-in-out;
   &:hover {
     cursor: pointer;
-    font-weight: bold;
+    color: var(--blue);
   }
 }
 

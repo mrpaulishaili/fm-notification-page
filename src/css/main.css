@@ -1,5 +1,6 @@
 :root {
   --white: hsl(0, 0%, 100%);
+  --v-light-blue: hsl(210, 60%, 98%);
   --light-blue: hsl(211, 68%, 94%);
   --blue: hsl(219, 85%, 26%);
   --grayish-blue-1: hsl(219, 12%, 42%);
@@ -52,8 +53,8 @@ main {
   background-color: var(--blue);
   color: var(--white);
   font-size: 1rem;
-  height: 1.8rem;
-  width: 2.5rem;
+  height: 1.75rem;
+  width: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,30 +116,40 @@ main {
   border-radius: 0.5rem;
   margin-top: 0.35rem;
   color: var(--grayish-blue-1);
-}
-.notifications .notification:hover {
-  cursor: pointer;
-  scale: 1.005;
-  border-color: var(--light-blue);
-}
-.notifications .notification.notRead:hover {
   background-color: #fff;
 }
-.notifications .notification.notRead {
+.notifications .notification .inner__note:hover {
   background-color: var(--light-blue);
+}
+.notifications .notification.notRead {
+  background-color: var(--v-light-blue);
 }
 .notifications .notification.notRead .notification__status {
   background-color: var(--red);
   height: 0.6rem;
   width: 0.6rem;
 }
+.notifications .notification:hover {
+  cursor: pointer;
+  background-color: var(--light-blue);
+  scale: 1.005;
+  border-color: var(--light-blue);
+}
+.notifications .notification.hasInnerMessage:hover {
+  background-color: #fff !important;
+}
+.notifications .notification__name:hover, .notifications .notification__topic:hover, .notifications .notification__action:hover {
+  color: var(--blue);
+}
 
 #markRead {
+  font-weight: 500;
+  color: var(--grayish-blue-2);
   transition: font-weight 0.2s ease-in-out;
 }
 #markRead:hover {
   cursor: pointer;
-  font-weight: bold;
+  color: var(--blue);
 }
 
 @media screen and (max-width: 375px) {

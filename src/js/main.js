@@ -1,7 +1,6 @@
 const MarkAllAsReadButton = document.querySelector('#markRead');
 
-//  FUNCTION : mark all notifications read
-
+//  Function : mark all notifications read
 function MarkAllAsRead() {
   const allUnreadNotifications = document.querySelectorAll('.notRead');
 
