@@ -1,0 +1,194 @@
+// Root
+
+:root {
+  // Color Variables
+  --white: hsl(0, 0%, 100%);
+  --light-blue: hsl(211, 68%, 94%);
+  --blue: hsl(219, 85%, 26%);
+  --grayish-blue-1: hsl(219, 12%, 42%);
+  --grayish-blue-2: hsl(219, 12%, 42%);
+  --grayish-blue-3: hsl(224, 21%, 14%);
+  --red: hsl(1, 90%, 64%);
+
+  //   Media Queries Variables
+  --Mobile: 375px;
+  --Desktop: 1440px;
+}
+
+// Mixins
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flexColumn {
+  @include flex();
+  flex-direction: column;
+}
+
+@mixin flexCenter {
+  @include flex();
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexJBetweenCenter {
+  @include flex();
+  justify-content: space-between;
+  align-items: center;
+}
+
+// Text Color Classes
+.blue {
+  color: var(--blue) !important;
+}
+
+// Styling
+html {
+  font-size: 16px;
+}
+body {
+  background-color: var(--light-blue);
+  @include flexCenter();
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+main {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  max-width: var(--Desktop);
+  margin: 0 auto;
+}
+
+.top {
+  @include flexJBetweenCenter();
+  margin-bottom: 1rem;
+
+  h1 {
+    font-size: 1.5rem;
+    @include flexCenter();
+    gap: 0.8rem;
+  }
+
+  .badge {
+    border-radius: 0.25rem;
+    background-color: var(--blue);
+    color: var(--white);
+    font-size: 1rem;
+    height: 1.8rem;
+    width: 2.5rem;
+    @include flexCenter();
+  }
+}
+
+.notifications {
+  @include flexColumn();
+  gap: 10px;
+
+  .notification {
+    @include flex();
+    gap: 1rem;
+    padding: 15px;
+    border-radius: 0.5rem;
+    align-items: flex-start;
+    background-color: var(--white);
+    border: 1px solid transparent;
+
+    transition: 0.2s ease-in-out;
+
+    > div {
+      flex-grow: 1;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    p {
+      position: relative;
+      line-height: 1.15;
+    }
+
+    &__topic {
+      color: var(--grayish-blue-2);
+    }
+
+    &__avatar {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      object-fit: cover;
+
+      &.action {
+        border-radius: 0.5rem;
+      }
+    }
+
+    &__status {
+      border-radius: 50%;
+      display: inline-flex;
+      margin-top: -0.5rem;
+      margin-left: 0.25rem;
+      background-color: transparent;
+    }
+
+    &__time {
+      margin-top: 0.1rem;
+      font-size: 1rem;
+      color: var(--grayish-blue-1);
+    }
+
+    .inner__note {
+      padding: 1rem;
+      border: 0.5px solid var(--light-blue);
+      border-radius: 0.5rem;
+      margin-top: 0.35rem;
+      color: var(--grayish-blue-1);
+    }
+
+    // State: Hover
+
+    &:hover {
+      cursor: pointer;
+      scale: 1.005;
+      border-color: var(--light-blue);
+    }
+
+    &.notRead:hover {
+      background-color: #fff;
+    }
+
+    // State: Distinguish between Read and Unread Notifications
+
+    &.notRead {
+      background-color: var(--light-blue);
+
+      .notification__status {
+        background-color: var(--red);
+        height: 0.6rem;
+        width: 0.6rem;
+      }
+    }
+  }
+}
+#markRead {
+  transition: font-weight 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 14px;
+  }
+  main {
+    padding: 2rem 1rem;
+  }
+  .notifications .notification {
+    padding: 1rem;
+  }
+}
