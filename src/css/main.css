@@ -94,7 +94,7 @@ main {
   align-items: flex-start;
   background-color: var(--white);
   border: 1px solid transparent;
-  transition: 0.2s ease-in-out;
+  transition: background-color, border-color, scale 0.2s ease-in-out;
 }
 .notifications .notification > div {
   flex-grow: 1;
