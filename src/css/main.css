@@ -52,7 +52,7 @@ main {
   padding: 2rem;
   background-color: #fff;
   border-radius: 1rem;
-  max-width: var(--Desktop);
+  max-width: 800px;
   margin: 0 auto;
 }
 
